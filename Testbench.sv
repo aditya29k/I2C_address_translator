@@ -307,7 +307,7 @@ module tb;
       wait((DUT.bridge.state == 8)&&(DUT.bridge.count == `clk4));
       if(intf.bus_val) begin
         intf.wr_en_s1 <= 1'b1;
-        intf.data_1 <= 1'b0; // <-- fixed typo (was wr_data_1)
+        intf.data_1 <= 1'b0; 
       end
       else begin
        intf.wr_en_s0 <= 1'b1;
