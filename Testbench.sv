@@ -260,7 +260,7 @@ module tb;
       $display("[MASTER] RECEIVED WRONG DATA");
     end
     
-    wait((DUT.bridge.state == 12)&&(DUT.bridge.count == `clk4*2 + 5)); // <-- semicolon fixed
+    wait((DUT.bridge.state == 12)&&(DUT.bridge.count == `clk4*2 + 5)); 
     
     if(DUT.bridge.recv_ack == 1'b1) begin: ACK_CHECK_M2B
       $display("[BRIDGE] RECEIVED ACK: %0d FROM MASTER", DUT.bridge.recv_ack);
